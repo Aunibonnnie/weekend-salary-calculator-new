@@ -25,22 +25,29 @@
         <button data-testid="submitButton" onclick="addSalary()">Submit</button>
     </div>
     <h2>Employees table graph</h2>
-    <table id="salaryTable">
+    <table>
+      <thead>
         <tr>
-            <td>Row1 cell1</td>
-            <td>Row1 cell2</td>
-            <td>Row1 cell3</td>
-            <td>Row1 cell4</td>
-            <td>Row1 cell5</td>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Annual Salary</th>
         </tr>
+      </thead>
+      <tbody id="salaryTable">
+        
+      </tbody>
     </table>
   </main>
   <!-- The *total monthly* cost must be rendered somewhere inside the `<footer>` element. -->
+  <!-- ///To find your total monthly income divide your annual salary by 12 (12 months in a year)./// -->
   <footer>
-    <p>Total Monthly</p>
+    <p id="monthlyIncome">Total Monthly:</p>
   </footer>
 </body>
 </html>
+<!-- $<span id="monthly-income">0.00 -->
 <!-- Your form's submit button **must** have a `data-testid="submitButton"` attribute. Like so:
 * ```html
   <button data-testid="submitButton">
