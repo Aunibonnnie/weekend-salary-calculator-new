@@ -33,6 +33,3 @@ function getSalary(){
 }
 
 getSalary();
-
-// <table><tr><th><tr><td>Salary</td></tr></th></tr></table>
-/* <table><tr><th><th><th><tr><td><td><td><tr></tr>Salary</td></td></td></tr></th></th></th></tr></table> */

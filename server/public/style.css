@@ -1,12 +1,8 @@
 header {
     text-align: center;
+    margin: -10px;
     padding: 20px;
     background-color: grey;
-}
-
-button {
-    display: block;
-    margin-right: 10px;
 }
 
 table{
@@ -18,4 +14,14 @@ table tr, table td{
     border: 1px solid black;
     padding: 10px;
 }
+
+table.alternate tr:nth-child(even) {
+    background-color: #BBBBBB;
+}
+
+button {
+    display: block;
+    margin-right: 10px;
+}
+
 
