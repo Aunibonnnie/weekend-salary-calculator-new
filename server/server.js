@@ -6,7 +6,7 @@ app.use( express.urlencoded( { extended: true} ) );
 // tell the server to receive your public files (index.html and client.js)
 app.use( express.static( 'server/public' ) );
 // globals
-let salary = [ {firstName: '', lastName: '', id: '', title: '', annualSalary: '' } ];
+let salary = [ {firstName: 'First Name', lastName: 'Last Name', id: 'ID', title: 'Title', annualSalary: 'Annual Salary' } ];
 const port = 5001;
 // spin up server
 app.listen( port, ()=>{

@@ -7,3 +7,8 @@ header {
 table, td{
     border: 1px solid black;
 }
+
+button {
+    display: block;
+    margin-right: 10px;
+  }

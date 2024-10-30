@@ -3,8 +3,16 @@ function addSalary(){
     console.log( 'in addSalary' );
     let objectToSend ={
         firstName: document.getElementById( 'firstNameInput' ).value,
+        lastName: document.getElementById( 'lastNameInput' ).value,
+        id: document.getElementById( 'idInput' ).value,
+        title: document.getElementById( 'titleInput' ).value,
+        annualSalary: document.getElementById( 'annualSalaryInput' ).value,
     }
     document.getElementById( 'firstNameInput' ).value ='';
+    document.getElementById( 'lastNameInput' ).value ='';
+    document.getElementById( 'idInput' ).value ='';
+    document.getElementById( 'titleInput' ).value ='';
+    document.getElementById( 'annualSalaryInput' ).value ='';
     console.log( 'sending:',objectToSend );
     axios.post( '/salary', objectToSend ).then(function( response ){
         console.log( 'back from post:',  response);
