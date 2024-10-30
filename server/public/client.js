@@ -27,9 +27,12 @@ function getSalary(){
         el.innerHTML='';
         for( let i=0; i<response.data.length; i++){
             const thisSalary = response.data[i];
-            el.innerHTML += `<table><tr><td>${thisSalary.firstName} ${ thisSalary.lastName } ${ thisSalary.id}  ${ thisSalary.title }  ${ thisSalary.annualSalary }</td></tr></table>`
+            el.innerHTML += `<table><tr><th><th><th><tr><td>${thisSalary.firstName}<td>${ thisSalary.lastName }<td> ${ thisSalary.id}  ${ thisSalary.title }  ${ thisSalary.annualSalary }</td></td></td></tr></th></th></th></tr></table>`
         }
     })
 }
 
 getSalary();
+
+// <table><tr><th><tr><td>Salary</td></tr></th></tr></table>
+/* <table><tr><th><th><th><tr><td><td><td><tr></tr>Salary</td></td></td></tr></th></th></th></tr></table> */

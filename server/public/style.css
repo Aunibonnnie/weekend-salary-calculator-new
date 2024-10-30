@@ -4,11 +4,18 @@ header {
     background-color: grey;
 }
 
-table, td{
-    border: 1px solid black;
-}
-
 button {
     display: block;
     margin-right: 10px;
-  }
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table tr, table td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
