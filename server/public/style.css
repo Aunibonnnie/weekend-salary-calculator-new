@@ -1,0 +1,9 @@
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: grey;
+}
+
+table, td{
+    border: 1px solid black;
+}
