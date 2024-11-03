@@ -29,11 +29,14 @@ function getSalary(){
         // const monthlySalary = document.getElementById( 'annualSalaryInput').value 
         const el = document.getElementById( 'salaryTable' );
         el.innerHTML='';
-        for( let i=0; i<response.data.length; i++){
+        for( let i=0; i<response.data.length; i++)
+            // if(annualSalary > 20000)
+            //     $(this).addClass('greater10');
+            {
             console.log(annualSalary);
             const thisSalary = response.data[i];
             annualSalary = annualSalary + Number(thisSalary.annualSalary)
-            el.innerHTML += `<tr><td>${thisSalary.firstName}<td>${ thisSalary.lastName }<td>${ thisSalary.id}<td>${ thisSalary.title }<td>${ thisSalary.annualSalary }</td></td></td></td></td></tr>`
+            el.innerHTML += `<tr><td>${thisSalary.firstName}<td>${ thisSalary.lastName }<td>${ thisSalary.id}<td>${ thisSalary.title }<td>${ thisSalary.annualSalary }<td><input type="button" value="Delete" onclick="deleteRow(this)"></td></td></td></td></td></td></tr>`
         }
 
         console.log("Monthly Salary:", annualSalary);
@@ -42,6 +45,22 @@ function getSalary(){
 }
 
 getSalary();
+
+// function removeMe(event){
+//     event.target.parentNode.remove();
+// }
+
+// function removeMe(event){
+//     event.target.parentNode.document.getElementById("myTable").deleteRow();
+// }
+
+function deleteRow(r) {
+    var i = r.parentNode.parentNode.rowIndex;
+    document.getElementById("myTable").deleteRow(i);
+  }
+
+// if(number > 10)
+//     $(this).addClass('greater10');
 
 // function calculateMonthlySalary(annualSalary) {
 //     return annualSalary / 12;
