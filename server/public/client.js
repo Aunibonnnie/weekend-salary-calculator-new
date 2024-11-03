@@ -30,8 +30,6 @@ function getSalary(){
         const el = document.getElementById( 'salaryTable' );
         el.innerHTML='';
         for( let i=0; i<response.data.length; i++)
-            // if(annualSalary > 20000)
-            //     $(this).addClass('greater10');
             {
             console.log(annualSalary);
             const thisSalary = response.data[i];
@@ -40,40 +38,21 @@ function getSalary(){
         }
 
         console.log("Monthly Salary:", annualSalary);
-        document.getElementById('monthlyIncome').innerHTML = annualSalary / 12;
+        document.getElementById('monthlyIncome').innerHTML = "Total Monthly: " + turnNumberRed(annualSalary / 12);
     })
 }
 
 getSalary();
-
-// function removeMe(event){
-//     event.target.parentNode.remove();
-// }
-
-// function removeMe(event){
-//     event.target.parentNode.document.getElementById("myTable").deleteRow();
-// }
 
 function deleteRow(r) {
     var i = r.parentNode.parentNode.rowIndex;
     document.getElementById("myTable").deleteRow(i);
   }
 
-// if(number > 10)
-//     $(this).addClass('greater10');
-
-// function calculateMonthlySalary(annualSalary) {
-//     return annualSalary / 12;
-//   }
-  
-//   // Example usage:
-//   let annualSalary = 60000;
-//   let monthlySalary = calculateMonthlySalary(annualSalary);
-  
-//   console.log("Monthly Salary:", monthlySalary);
-
-// function calculateIncome() {
-// 	var monthlyIncome = dailyIncome * 22;
-
-// 	document.getElementById("monthly-income").textContent = monthlyIncome.toFixed(2);
-// }
+  function turnNumberRed(annualSalary) {
+    if (annualSalary > 20000) {
+      return '<span style="color: red;">' + annualSalary + '</span>';
+    } else {
+      return annualSalary;
+    }
+  }
